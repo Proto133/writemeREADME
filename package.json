@@ -23,6 +23,7 @@
   "homepage": "https://github.com/Proto133/writemeREADME#readme",
   "dependencies": {
     "fs": "*",
-    "inquirer": "^8.1.0"
+    "inquirer": "^8.1.0",
+    "util": "^0.12.4"
   }
 }
