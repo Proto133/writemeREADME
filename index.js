@@ -2,10 +2,8 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const util = require('util');
-const license = require('generate-license');
 const generateMarkdown = require('./utils/generateMarkdown');
 const writeFileAsync = util.promisify(fs.writeFile);
-// const generateMarkdown = require('utils/generateMarkdown.js');
 
 //Prompt the user questions to populate the README.md
 function promptUser() {
@@ -201,6 +199,8 @@ function promptUser() {
         }
     ])
 }
+
+license.gen
 
 
 //A function to initialize app

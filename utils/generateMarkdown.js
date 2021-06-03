@@ -32,13 +32,10 @@ const lArray = [
 ]
 
 function generateMarkdown(data) {
-    console.log(data.license)
-    console.log(lArray)
     let index = lArray.indexOf(data.license)
-    console.log(index)
     let lName = lArray[(index + 1)]
     let lLink = lArray[(index + 2)]
-    console.log(lName, lLink)
+
     return `
   <h1 align="center">${data.Title} 🎉 </h1>
     
