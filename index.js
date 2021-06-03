@@ -200,9 +200,6 @@ function promptUser() {
     ])
 }
 
-license.gen
-
-
 //A function to initialize app
 async function init() {
     try {

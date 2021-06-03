@@ -1,40 +1,45 @@
 const lArray = [
     "Apache_v2",
-    "Apache License 2.0",
+    "the Apache License 2.0",
     "https://opensource.org/licenses/Apache-2.0",
     "AFL_v3",
-    "Academic Free License 3.0",
+    "the Academic Free License 3.0",
     "https://opensource.org/licenses/AFL-3.0",
-    "AFL_v3",
-    "GNU General Public License version 2",
+    "GPL_v2",
+    "the GNU General Public License version 2",
     "https://opensource.org/licenses/GPL-2.0",
     "GPL_v3",
-    "GNU General Public License version 3",
+    "the GNU General Public License version 3",
     "https://opensource.org/licenses/GPL-3.0",
     "ISC",
-    "ISC License",
+    "the ISC License",
     "https://opensource.org/licenses/ISC",
     "MIT",
-    "MIT License",
+    "the MIT License",
     "https://opensource.org/licenses/MIT",
     "MPL_v2",
-    "Mozilla Public License 2.0",
+    "the Mozilla Public License 2.0",
     "https://opensource.org/licenses/MPL-2.0",
     "BSD_2_Clause",
-    "2-clause BSD License",
+    "the 2-clause BSD License",
     "https://opensource.org/licenses/BSD-2-Clause",
     "BSD_3_Clause",
-    "3-clause BSD License",
+    "the 3-clause BSD License",
     "https://opensource.org/licenses/BSD-3-Clause",
-    "open",
-    "",
+    "Open",
+    "no",
     ""
 ]
 
 function generateMarkdown(data) {
+    console.log('data.license is ', data.license)
     let index = lArray.indexOf(data.license)
-    let lName = lArray[(index + 1)]
+    console.log('index is ', index)
+    let lName = lArray[index + 1]
+    console.log('index plus 1 is', index + 1)
+    console.log('lName is ', lName)
     let lLink = lArray[(index + 2)]
+    console.log('lLink is ', lLink)
 
     return `
   <h1 align="center">${data.Title} 🎉 </h1>
@@ -78,7 +83,7 @@ function generateMarkdown(data) {
   ## License 🧑‍🤝‍🧑
   ![badge](https://img.shields.io/badge/license-${data.license}-brightgreen)
   <br />
-  This application is covered by the <a href="${lLink}"> ${lName}</a> license. 
+  This application is covered by <a href="${lLink}"> ${lName}</a> license. 
 
  
   ----
