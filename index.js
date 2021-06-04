@@ -2,7 +2,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const util = require('util');
-const generateMarkdown = require('./utils/generateMarkdown');
+const generateMarkdown = require('./generateMarkdown');
 const writeFileAsync = util.promisify(fs.writeFile);
 const path = require('path');
 
@@ -227,4 +227,5 @@ async function init() {
         console.log(err);
     }
 }
-// Function call to initialize app
+// export for external use
+module.exports = { init }
