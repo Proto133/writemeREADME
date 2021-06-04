@@ -196,22 +196,36 @@ function promptUser() {
             type: "input",
             message: "Please enter your email: ",
             name: "email"
+        },
+        {
+            type: "input",
+            message: "Please enter the full path where you'd like to write the readme ",
+            name: "dir"
         }
     ])
 }
+
+
+// function repoDIR() {
+//     return `${answers.dir}`
+// }
 
 //A function to initialize app
 async function init() {
     try {
         // Ask user questions and generate responses
         const answers = await promptUser();
+
         const generateContent = generateMarkdown(answers);
-        // Write new README.md to dist directory
-        await writeFileAsync('./writeme/README.md', generateContent);
+        const repoDIR = repoDIR(answers)
+            // Write new README.md to dist directory
+        await writeFileAsync(`./writeme/README.md`, generateContent);
+        // await writeFileAsync(`${repoDIR}/README.md`, generateContent);
         console.log('🎊  Successfully wrote to README.md  🎊');
     } catch (err) {
         console.log(err);
     }
 }
+
 // Function call to initialize app
 init();
