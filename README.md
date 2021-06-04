@@ -17,7 +17,18 @@
   - [Questions](#questions-)
   
   ## Installation Instructions 📣
-  Clone this repo and run <code>npm i</code> in root directory.
+  ### Download Manually
+
+  1) Clone this repo 
+  2) Run <code>npm i</code> in root directory.
+  
+  ### NPM
+
+   ```
+   npm install writemeREADME
+
+   ```
+
   
   ## Usage 🖱️
   
@@ -27,7 +38,7 @@
 
   -Answer Prompts  
 
-  -You'll find your generated README in the 'writeme' directory.  
+  -You'll find your generated README in the directory you designated.  
   
   -Enjoy 😎
   
@@ -40,9 +51,9 @@
   Peter Roto
   
   ## Screenshots 📷
-  |  Active Screenshot                              | Generated Product                               | Code Snapshot                               | 
+  | Code Snapshot                                          | Generated Product                                      |  Active Screenshot                                     | 
   |:------------------------------------------------------:|:------------------------------------------------------:|:------------------------------------------------------:|
-  |<img alt="Screenshot of code" src="https://loremflickr.com/320/240" width="150" height="150"> |<a title="Click for README.md" href="./README.md"><img alt="Screenshot of README file generated with this application" src="./images/README.png" width="150" height="150"></a>|<img alt="Screenshot of code" src="https://loremflickr.com/320/240" width="150" height="150">|
+  |<a href="./images/writemeREADME_snippet.png" target="_blank"><img alt="Screenshot of code" src="./images/writemeREADME_snippet.png" width="150" height="150"></a> |<a title="Click for README.md" target="_blank" href="./README.md"><img alt="Screenshot of README file generated with this application" src="./images/README.png" width="150" height="150"></a>|<a href="./images/writemeREADME_Active.png" target="_blank"> <img alt="Screenshot of code" src="./images/writemeREADME_Active.png" width="150" height="150"></a>|
   |                                                        |                                                        |                                                        |
   |                                                        |                                                        |                                                        |   
   ## Questions ❔
