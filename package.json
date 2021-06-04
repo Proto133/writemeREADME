@@ -1,5 +1,5 @@
 {
-    "name": "@peterroto/writeme",
+    "name": "writemeREADME",
     "version": "1.0.0",
     "description": "A README Generator using NodeJS and Inquirer.",
     "main": "index.js",
