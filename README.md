@@ -40,9 +40,13 @@
 
   -Answer Prompts  
 
+  --To test it out you can use <code>`https://loremflickr.com/320/240`</code> to generate random images as placeholders for screenshots section.
+
   -You'll find your generated README in the directory you designated.  
   
   -Enjoy 😎
+
+
   
 ### NPM Install 
 
