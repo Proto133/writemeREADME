@@ -1,3 +1,4 @@
+//Array of License Info
 const lArray = [
     "Apache_v2",
     "the Apache License 2.0",
@@ -31,6 +32,7 @@ const lArray = [
     ""
 ]
 
+//The Magic (Edit This if you'd like to make the Generated Readme look different.)
 function generateMarkdown(data) {
     console.log('data.license is ', data.license)
     let index = lArray.indexOf(data.license)
@@ -41,6 +43,7 @@ function generateMarkdown(data) {
     let lLink = lArray[(index + 2)]
     console.log('lLink is ', lLink)
 
+    // Template Literal for the README output.
     return `
   <h1 align="center">${data.Title} 🎉 </h1>
     
