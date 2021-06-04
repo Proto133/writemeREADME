@@ -4,6 +4,15 @@ const fs = require('fs');
 const util = require('util');
 const generateMarkdown = require('./utils/generateMarkdown');
 const writeFileAsync = util.promisify(fs.writeFile);
+const path = require('path');
+
+fs.mkdir(path.join(__dirname, 'writeme'), (err) => {
+    if (err) {
+        console.log(err.message);
+    }
+    console.log('Directory created successfully!');
+    init();
+});
 
 //Prompt the user questions to populate the README.md
 function promptUser() {
@@ -52,7 +61,7 @@ function promptUser() {
         },
         {
             type: "input",
-            message: "Please add relative path  or URL to a screenshot of the project. (1/3) \n (i.e directory/image.png) or (https://urlToTheImage.com):",
+            message: "Please add relative path  or URL to a screenshot of the project. (1/3) \n (i.e ./directory/image.png) or (https://urlToTheImage.com):",
             name: "screenshot1",
         },
         {
@@ -67,7 +76,7 @@ function promptUser() {
         },
         {
             type: "input",
-            message: "Please add relative path or URL to a screenshot of the project.(2/3)\n (i.e directory/image.png) or (https://urlToTheImage.com):",
+            message: "Please add relative path or URL to a screenshot of the project.(2/3)\n (i.e ./directory/image.png) or (https://urlToTheImage.com):",
             name: "screenshot2",
         },
         {
@@ -82,7 +91,7 @@ function promptUser() {
         },
         {
             type: "input",
-            message: "Please add relative path or URL to a screenshot of the project.(3/3) \n (i.e directory/image.png) or (https://urlToTheImage.com):",
+            message: "Please add relative path or URL to a screenshot of the project.(3/3) \n (i.e ./directory/image.png) or (https://urlToTheImage.com):",
             name: "screenshot3",
         },
         {
@@ -139,7 +148,7 @@ function promptUser() {
         },
         {
             type: "input",
-            message: "Please add relative path  or URL to a screenshot of the project. (1/3) \n (i.e directory/image.png) or (https://urlToTheImage.com):",
+            message: "Please add relative path  or URL to a screenshot of the project. (1/3) \n example 1 \n RELATIVE PATH to appropriate repo directory \n./directory/image.png \n or URL (https://urlToTheImage.com/image.png):",
             name: "screenshot1",
         },
         {
@@ -154,7 +163,7 @@ function promptUser() {
         },
         {
             type: "input",
-            message: "Please add relative path or URL to a screenshot of the project.(2/3)\n (i.e directory/image.png) or (https://urlToTheImage.com):",
+            message: "Please add relative path or URL to a screenshot of the project.(2/3)\n (i.e ./directory/image.png) or (https://urlToTheImage.com):",
             name: "screenshot2",
         },
         {
@@ -169,7 +178,7 @@ function promptUser() {
         },
         {
             type: "input",
-            message: "Please add relative path or URL to a screenshot of the project.(3/3) \n (i.e directory/image.png) or (https://urlToTheImage.com):",
+            message: "Please add relative path or URL to a screenshot of the project.(3/3) \n (i.e ./directory/image.png) or (https://urlToTheImage.com):",
             name: "screenshot3",
         },
         {
@@ -199,33 +208,23 @@ function promptUser() {
         },
         {
             type: "input",
-            message: "Please enter the full path where you'd like to write the readme ",
+            message: "Please enter the full path where you'd like to write the readme \n (i.e /path/to/local/repo/dir) \n Alternatively, you can just write ./writeme and copy and paste the file where it needs to go.):",
             name: "dir"
         }
     ])
 }
-
-
-// function repoDIR() {
-//     return `${answers.dir}`
-// }
 
 //A function to initialize app
 async function init() {
     try {
         // Ask user questions and generate responses
         const answers = await promptUser();
-
         const generateContent = generateMarkdown(answers);
-        const repoDIR = repoDIR(answers)
-            // Write new README.md to dist directory
-        await writeFileAsync(`./writeme/README.md`, generateContent);
-        // await writeFileAsync(`${repoDIR}/README.md`, generateContent);
+        // Write new README.md to dist directory
+        await writeFileAsync(`${answers.dir}/README.md`, generateContent);
         console.log('🎊  Successfully wrote to README.md  🎊');
     } catch (err) {
         console.log(err);
     }
 }
-
 // Function call to initialize app
-init();

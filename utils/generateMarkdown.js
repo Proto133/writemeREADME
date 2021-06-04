@@ -50,14 +50,14 @@ function generateMarkdown(data) {
    ${data.Summary}
  
   ## Table of Contents 
-  - [Description](#description)
-  - [Screenshots](#screenshots)
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [Contributing](#contributing)
-  - [Questions](#questions)
-  - [License](#license)
-  
+  - [Description](#--description--)
+  - [Installation Instructions 📣](#installation-instructions-)
+  - [Usage 🖱️](#usage-️)
+  - [Contributors 🧑‍🤝‍🧑](#contributors-)
+  - [Screenshots 📷](#screenshots-)
+  - [Questions ❔](#questions-)
+  - [License ©️](#license-️)
+    
   ## Installation Instructions 📣
   ${data.installation}
   
@@ -85,12 +85,8 @@ function generateMarkdown(data) {
   <br />
   This application is covered by <a href="${lLink}"> ${lName}</a> license. 
 
- 
-  ----
-  | 🤯 &#8195; WHOA! &#8195; 🤯|
-    |:----|
-    |This README was generated with [writemeREADME](https://github.com/proto133/writemeREADME) |
-    |  |
+  --------------------------- \n \n
+  This README was generated with [writemeREADME](https://github.com/proto133/writemeREADME) 
   
 `
 }

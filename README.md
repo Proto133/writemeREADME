@@ -7,13 +7,14 @@
    A console application to streamline creating readme files for developers.
  
   ## Table of Contents 
-  - [Description](#description)
+
+  - [Description](#--description--)
   - [Screenshots](#screenshots)
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [License](#license)
-  - [Contributing](#contributing)
-  - [Questions](#questions)
+  - [Installation](#installation-instructions-)
+  - [Usage](#usage-)
+  - [License](#license-)
+  - [Contributors](#contributors-)
+  - [Questions](#questions-)
   
   ## Installation Instructions 📣
   Clone this repo and run <code>npm i</code> in root directory.
@@ -41,7 +42,7 @@
   ## Screenshots 📷
   |  Active Screenshot                              | Generated Product                               | Code Snapshot                               | 
   |:------------------------------------------------------:|:------------------------------------------------------:|:------------------------------------------------------:|
-  | <img alt="Active Screenshot" src="https://loremflickr.com/320/240" width="150" height="150"> |<img alt="Screenshot of README file generated with this application" src="https://loremflickr.com/320/240" width="150" height="150">|<img alt="Screenshot of code" src="https://loremflickr.com/320/240" width="150" height="150">|
+  | ![Active_Screenshot](./example/Pic1.PNG) |<a title="Click for README.md" href="./README.md"><img alt="Screenshot of README file generated with this application" src="https://loremflickr.com/320/240" width="150" height="150"></a>|<img alt="Screenshot of code" src="https://loremflickr.com/320/240" width="150" height="150">|
   |                                                        |                                                        |                                                        |
   |                                                        |                                                        |                                                        |   
   ## Questions ❔
