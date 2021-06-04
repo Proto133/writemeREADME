@@ -32,6 +32,8 @@
   
   ## Usage 🖱️
   
+  ### Cloned Directory
+
   -Navigate to root directory of writemeREADME in terminal
   
   -Type ```node index.js```  
@@ -42,6 +44,17 @@
   
   -Enjoy 😎
   
+### NPM Install 
+
+```
+//imports module
+const writeme = require('writemereadme')
+
+//calls the function
+writeme.init();
+
+```
+
   ## License 🧑‍🤝‍🧑
   ![badge](https://img.shields.io/badge/license-BSD_3_Clause-brightgreen)
   <br />

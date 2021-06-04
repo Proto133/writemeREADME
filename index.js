@@ -6,7 +6,7 @@ const generateMarkdown = require('./generateMarkdown');
 const writeFileAsync = util.promisify(fs.writeFile);
 const path = require('path');
 
-fs.mkdir(path.join(__dirname, 'writeme'), (err) => {
+fs.mkdir(path.join(process.cwd(), 'writeme'), (err) => {
     if (err) {
         console.log(err.message);
     }
@@ -228,4 +228,4 @@ async function init() {
     }
 }
 // export for external use
-module.exports = { init }
+module.exports = { init, promptUser, generateMarkdown }
