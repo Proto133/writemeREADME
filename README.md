@@ -5,9 +5,15 @@
   
 ## 👇  Description  👇
 
-   A console application to streamline creating readme files for developers.
+---
+
+   A console application to streamline creating readme files for developers. Upon running WritemeREADME, the user is presented with a series of prompts that were created using [inquirer](https://www.npmjs.com/package/inquirer). After completed the application then generates a new [README.md](https://en.wikipedia.org/wiki/README) file in the specified directory (*last prompt*).
+
+The purpose is to make writing a solid README simpler and less time consuming.
 
 ## Table of Contents
+
+---
 
 - [Description](#--description--)
 - [Screenshots](#screenshots)
@@ -18,6 +24,8 @@
 - [Questions](#questions-)
   
 ## Installation Instructions 📣
+
+---
 
 ### Download Manually
 
@@ -32,6 +40,8 @@
    ```
 
 ## Usage 🖱️
+
+---
   
 ### Cloned Directory
 
@@ -57,6 +67,13 @@ const writeme = require('writemereadme')
 writeme.init();
 
 ```
+- Then just use the application
+
+---
+
+*Alternatively, you can very easily not answer any of the prompts and just let it create a nice template for you to fill out at your leisure.*
+
+---
 
 ## License 🧑‍🤝‍🧑
 
@@ -80,6 +97,8 @@ Peter Roto
 [![writemeREADME Demo](https://res.cloudinary.com/marcomontalbano/image/upload/v1622851451/video_to_markdown/images/youtube--Kh4zlCA8oC8-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://youtu.be/Kh4zlCA8oC8 "writemeREADME Demo")
 
 ## Questions ❔
+
+---
 
   For any issues or feedback please email me, find my email address below
 

@@ -34,14 +34,14 @@ const lArray = [
 
 //The Magic (Edit This if you'd like to make the Generated Readme look different.)
 function generateMarkdown(data) {
-    console.log('data.license is ', data.license)
+    // console.log('data.license is ', data.license)
     let index = lArray.indexOf(data.license)
-    console.log('index is ', index)
+        // console.log('index is ', index)
     let lName = lArray[index + 1]
-    console.log('index plus 1 is', index + 1)
-    console.log('lName is ', lName)
+        // console.log('index plus 1 is', index + 1)
+        // console.log('lName is ', lName)
     let lLink = lArray[(index + 2)]
-    console.log('lLink is ', lLink)
+        // console.log('lLink is ', lLink)
 
     // Template Literal for the README output.
     return `
@@ -50,7 +50,9 @@ function generateMarkdown(data) {
   ![badge](https://img.shields.io/badge/license-${data.license}-brightgreen)<br />
   
   ## 👇  Description  👇
-   ${data.Summary}
+---
+  
+  ${data.Summary}
  
   ## Table of Contents 
   - [Description](#--description--)
@@ -62,29 +64,41 @@ function generateMarkdown(data) {
   - [License ©️](#license-️)
     
   ## Installation Instructions 📣
+---
+
   ${data.installation}
   
   ## Usage 🖱️
+---
+
   ${data.usage}
   
   ## Contributors 🧑‍🤝‍🧑
+---
   ${data.contributing}
   
   ## Screenshots 📷
+---
+
   |  ${data.screenshot1Title}                              | ${data.screenshot2Title}                               | ${data.screenshot3Title}                               | 
   |:------------------------------------------------------:|:------------------------------------------------------:|:------------------------------------------------------:|
   | <img alt="${data.screenshot1Alt}" src="${data.screenshot1}" width="150" height="150"> |<img alt="${data.screenshot2Alt}" src="${data.screenshot2}" width="150" height="150">|<img alt="${data.screenshot3Alt}" src="${data.screenshot3}" width="150" height="150">|
   |                                                        |                                                        |                                                        |
   |                                                        |                                                        |                                                        |   
+
+
   ## Questions ❔
+
+---
+
   ${data.issues}<br />
   <br />
   :octocat: Find me on GitHub: [${data.username}](https://github.com/${data.username})<br />
   <br />
   📬 Email me with any questions: ${data.email}<br /><br />
   
-  ## License 🧑‍🤝‍🧑
-  ![badge](https://img.shields.io/badge/license-${data.license}-brightgreen)
+  ## License ![badge](https://img.shields.io/badge/license-${data.license}-brightgreen)
+---
   <br />
   This application is covered by <a href="${lLink}"> ${lName}</a> license. 
 
