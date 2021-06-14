@@ -30,7 +30,7 @@ The purpose is to make writing a solid README simpler and less time consuming.
 ### Download Manually
 
   1) Clone this repo
-  2) Run <code>npm i</code> in root directory.
+  2) Run <code>npm i</code> in root directory of your project.
   
 ### NPM
 
